@@ -1,6 +1,7 @@
 # Global Execution Context
 
 - When the javascript code start runnning, A global execution context is created.
+
   ![Execution Context](/assets/execution-context.jpg "Execution Context")
 
 - Inside the Global Execution Context, there are 2 components. The first component is **memory component** and the 2nd one is **code component**
