@@ -15,24 +15,25 @@ Let's see the below example images to make it more understandable.
 
 ![Prototype Example3](/assets/prototype3.png)
 
+In the above scenario, we are attempting to assign the object as the prototype of object2 using object2.__proto__ = object. However, this approach is no longer recommended. 
 
 ![Prototype Example4](/assets/prototype4.png)
 
 
-In the above image, we are created a `arr` `object` and `fun`. so if we are trying to access the property and methods of them then we are using `dot` keyword to access them. so those properties are internally added by javascript engine.
+"In the above image, we have created objects named arr, object and fun. When accessing their properties and methods, we use the dot notation (.). These properties and methods are internally added by the JavaScript engine."
 
-Now if we wanted to see those properties and methods then we can write :-
+If we want to view those properties and methods, we can write:
 
 - `arr.__proto__`
- - It basically return array prototype and that also has an prototype which we can access it via `arr.__proto__.__proto__`. It will return us object prototype and it has another prototype which we can access it via `arr.__proto__.__proto__.__proto__`. It will return `null` and this chain willgoing to be end now. this is called a `Prototype Chaining`.
+ - It returns the array prototype, which can also be accessed via arr.__proto__.__proto__. This will return the object prototype, which in turn has another prototype accessible via arr.__proto__.__proto__.__proto__. Eventually, this chain ends with a return value of null. This process is known as 'Prototype Chaining'.
 
 
 - `object.__proto__`
- - . It basically return us object prototype and it also has an prototype which we can access it via `object.__proto__.__proto__`. It will return `null` and this chain will going to be end now.
+ - It returns the object prototype, which also has its own prototype accessible via object.__proto__.__proto__. Eventually, this chain ends with a return value of null.
 
 
 - `fun.__proto__` 
- - It basically return function prototype and that also has an prototype which we can access it via `fun.__proto__.__proto__`. It will return us function prototype and it has another prototype which we can access it via `fun.__proto__.__proto__.__proto__`. It will return `null` and this chain willgoing to be end now.
+ - It returns the function prototype, which also has its own prototype accessible via fun.__proto__.__proto__. This will return the function prototype, which in turn has another prototype accessible via fun.__proto__.__proto__.__proto__. Eventually, this chain ends with a return value of null.
 
 ```js
 arr.__proto__ === Array.prototype // true
