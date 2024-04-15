@@ -8,8 +8,8 @@
 - Modules
 - Default parameter
 
-**Arrow Functions:** Arrow functions provide a more concise syntax for writing anonymous functions.
 
+**Arrow Functions:** Arrow functions provide a more concise syntax for writing anonymous functions.
 
 ```js
 
@@ -21,8 +21,23 @@ function add(a, b) {
 // ES6 (Arrow Function)
 const add = (a, b) => a + b;
 
+```
+
+```js
+
+// Normal function as a constructor
+function NormalConstructor() {
+  this.value = 10;
+}
+const normalInstance = new NormalConstructor();
+console.log(normalInstance.value); // Output: 10
 
 ```
+
+- Arrow functions do not have their own arguments object, while normal functions do.
+- Arrow functions cannot be used as constructors, while normal functions can.
+- Arrow function implicitly return values if the body consists of a single expression, while normal functions require explicit return statements.
+
 
 **let and const:** let and const allow block-scoped variable declarations, improving variable scoping in JavaScript.
 
@@ -60,8 +75,9 @@ console.log(`Hello, ${name}!`);
 
 **Destructuring Assignment:** Destructuring assignment allows for extracting values from arrays or objects and assigning them to variables.
 
-```js
+Object Destructuring
 
+```js
 // ES5
 var person = { name: 'Bob', age: 30 };
 var name = person.name;
@@ -72,6 +88,30 @@ const person = { name: 'Bob', age: 30 };
 const { name, age } = person;
 
 ```
+
+Array Destructuring
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+const [first, second, ...rest] = numbers;
+
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(rest); // Output: [3, 4, 5]
+```
+
+Swap variable (Via Array Destructuring)
+
+```js
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a];
+
+console.log(a); // Output: 2
+console.log(b); // Output: 1
+```
+
 
 **Spread and Rest Operators:** The spread operator (...) allows for expanding arrays or objects, while the rest parameter syntax also uses ... to represent an indefinite number of arguments as an array.
 
