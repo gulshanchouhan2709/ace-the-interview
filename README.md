@@ -2,7 +2,7 @@
   JavaScript Notes
 </h1>
 
-These are the notes which i've prepared using the namaste javascript series.
+The repo contains concise and informative notes covering key concepts and features of JavaScript and serve as a handy reference for JavaScript developers of all levels.
 
 Hope this helps!
 
