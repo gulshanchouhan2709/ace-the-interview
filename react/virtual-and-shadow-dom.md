@@ -1,4 +1,4 @@
-# Virtual DOM
+# Virtual and Shadow DOM
 
 In ReactJS, virtual DOM is a copy or blueprint of real/actual DOM.
 
