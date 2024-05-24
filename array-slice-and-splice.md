@@ -1,7 +1,7 @@
 # Array Slice and Splice method
 
 
-**Slice:** This method returns a shallow copy of a portion of an array into a new array object. It does not modify the original array.
+**Slice:** If we want to get a portion of the array from specific indexing so we can use "Slice" method and it does not modify the original array.
 
 
 ```js
@@ -16,7 +16,7 @@ console.log(fruits); // Original array is unchanged: ['apple', 'banana', 'cherry
 
 ```
 
-**Splice:** This method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+**Splice:** This method is used to  removing or replacing existing elements and/or adding new elements in place.
 
 ```js
 
