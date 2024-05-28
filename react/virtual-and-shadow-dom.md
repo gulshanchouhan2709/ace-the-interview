@@ -58,4 +58,62 @@ Here's what happens behind the scenes:
 - React then calculates the minimal set of changes needed to update the actual DOM (e.g., adding new items or removing deleted items).
 - Finally, React efficiently applies these changes to the actual DOM, resulting in the updated list being displayed on the webpage.
 
+
+
+**Shadow DOM**
+
+Shadow DOM allows us to create self-contained components with their own styles and DOM structure, preventing CSS and JavaScript conflicts with the rest of the document.
+
+Simple Code sample for Shadow DOM
+
+```js
+
+// ShadowComponent.js
+import React, { useEffect, useRef } from 'react';
+
+const ShadowComponent = () => {
+  const shadowHostRef = useRef(null);
+
+  useEffect(() => {
+    // Create and attach the shadow root
+    const shadowRoot = shadowHostRef.current.attachShadow({ mode: 'open' });
+
+    // Create some content inside the shadow DOM
+    const wrapper = document.createElement('div');
+    wrapper.setAttribute('class', 'wrapper');
+
+    const info = document.createElement('p');
+    info.textContent = 'This is inside the Shadow DOM';
+
+    // Create and apply styles inside the shadow DOM
+    const style = document.createElement('style');
+    style.textContent = `
+      .wrapper {
+        background-color: lightgray;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      p {
+        color: red;
+        font-size: 18px;
+      }
+    `;
+
+    // Append the style and content to the shadow root
+    shadowRoot.appendChild(style);
+    shadowRoot.appendChild(wrapper);
+    wrapper.appendChild(info);
+  }, []);
+
+  return (
+    <div ref={shadowHostRef} style={{ border: '1px solid black', padding: '10px', margin: '10px' }}>
+      Shadow DOM Host
+    </div>
+  );
+};
+
+export default ShadowComponent;
+
+```
+
 <hr>
