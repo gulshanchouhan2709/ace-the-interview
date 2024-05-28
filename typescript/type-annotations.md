@@ -5,11 +5,17 @@ In TypeScript, type annotations allow you to explicitly specify the type of a va
 **1. Basic Types**
 
 number: Represents numeric values.
+
 string: Represents textual values.
+
 boolean: Represents true/false values.
+
 null and undefined: Represent absence of value.
+
 any: Represents any type (opt-out of type checking).
+
 void: Used as the return type of functions that do not return a value.
+
 
 ```js
 
