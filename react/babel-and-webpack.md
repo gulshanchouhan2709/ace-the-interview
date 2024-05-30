@@ -13,7 +13,7 @@ Advantages
 
 **Babel: The JavaScript Compiler:**
 
-Babel is a JavaScript compiler. Modern browsers don't understand all the latest JavaScript features like JSX (used for writing React components) and syntax from newer ECMAScript versions (like arrow functions and classes). Babel takes your modern JavaScript code and transforms it into code that can be understood by older browsers.
+Babel is a JavaScript compiler. Older browsers don't understand all the latest JavaScript features like JSX (used for writing React components) and syntax from newer ECMAScript versions (like arrow functions and classes). Babel takes your modern JavaScript code and transforms it into code that can be understood by older browsers.
 
 How it works:
 

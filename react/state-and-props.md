@@ -1,7 +1,5 @@
 # State and Props
 
-In ReactJS, components go through various stages in their lifecycle, from initialization to destruction.
-
 
 **State:** State is a JavaScript object that represents the dynamic data managed by a component.
 
