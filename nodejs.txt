@@ -1,0 +1,199 @@
+why we should use nodejs apart from other server side languages?
+
+- Due to the high performance because it's running on chrome v8 which execute the javascript code very fast and has a large community support.
+
+- Also cross platform development support is possible like we can able to create desktop application via using electron.
+
+===================
+
+blocking/ non blocking
+
+Blocking: The program waits for the operation to finish before moving on. This can make things slow if there's a lot to wait for.
+
+Non-Blocking: The program starts the operation and moves on to other things. It gets notified when the operation is done, which makes everything run smoother and faster.
+
+===================
+
+why nodejs is so fast?
+
+- Non blocking: Node.js can handle many tasks at the same time without waiting for one to finish before starting another.
+
+- v8 chrome engine: Node.js runs on the V8 engine, which is designed by Google for Chrome and is very fast at executing JavaScript code.
+
+===================
+
+authentication and authorization?
+
+- Authentication: When you log into your email account, you enter your username and password. This process verifies that you are really the person you claim to be.
+
+- authorization: Once you're logged into your email account (authenticated), authorization determines what actions you can take.
+
+===================
+
+clustering
+
+Clustering in Node.js means running multiple instances (copies) of your application to handle more tasks at the same time.
+
+It allows your application to use all the CPU cores available on your server, instead of just one.
+
+===================
+
+repl
+
+In simple terms, a REPL (Read-Eval-Print Loop) in Node.js is like an interactive playground where you can type JavaScript code, and it instantly evaluates and shows you the results.
+
+- First, make sure you have Node.js installed on your computer.
+- Open your terminal or command prompt.
+- Type node and hit Enter to start the Node.js REPL.
+- then we can test our code in cmd only.
+
+===================
+
+Question.) stream , buffer, middleware, async operation, event emitter, fork, spawn
+
+Stream: It's a way to reading or writing data sources in small, manageable chunks rather than to get it all at once.
+
+middleware:  It's bridge that allows you to modify or process requests before they reach your main application logic. Middleware is commonly used for tasks like authentication, logging, or data validation.
+
+Async Operation: An asynchronous operation in Node.js is a task that doesn't happen immediately.
+
+Event Emitter: It's widely used in Node.js for handling events like incoming HTTP requests, file system changes, or custom events within your application.
+
+Fork: Forking in Node.js refers to creating child processes that run independently of the main thread. Forking allows you to take advantage of multiple CPU cores and distribute workload efficiently across your system.
+
+Spawn: Spawning in Node.js is similar to forking but more lightweight. It's a way to create new processes to execute external commands or scripts.
+
+===================
+
+how we can secure node app?
+
+- We should use CORS to restrict the unwanted domains/ip to access our app.
+- We can use user-agent key from request header to find the client.
+- We can use helmet package to secure the api header.
+- We should sanetize/validate the user inputs.
+- Enable https and implement rate limiting as per the ip address.
+- Authorization and authentication techniques.
+
+===================
+
+event driven programing
+
+Nodejs follow the event driven architecture which allowing applications to respond to various events in a flexible and efficient manner.
+
+===================
+
+package.json or package-lock.json
+
+package.json is a file that contains metadata about the project, including its name, version, dependencies, and other configurations.
+
+it's lockfile, providing a complete record of the exact versions of all dependencies (including nested dependencies) installed in the project.
+
+===================
+
+“control flow function” in Node.js?
+
+control flow functions are functions or patterns used to manage the flow of asynchronous operations and handle the execution of code based on certain conditions or events. 
+
+Let's suppose if we use "Async" library then 
+
+- async.series([])
+- async.parallel([])
+
+===================
+
+openssl
+fetchapi
+toolchain
+how do you handle a migration project
+how do you convert current version project to older version project?
+
+===================
+
+npm and yarn
+
+npm: Comes bundled with Node.js installation.
+Yarn: Needs to be installed separately, either globally or per project.
+Lockfile:
+
+npm: Uses package-lock.json for locking dependency versions (from npm v5 onwards).
+Yarn: Uses yarn.lock for locking dependency versions.
+
+===================
+
+jwt and it's algorithm
+
+JWT provides a flexible and secure way to authenticate and authorize users in Node.js applications. JWTs consist of three parts separated by dots (.): the header, the payload, and the signature.
+
+In Node.js, common algorithms for JWT include:
+
+HS256 (HMAC with SHA-256): This algorithm uses a secret key to sign and verify tokens.
+RS256 (RSA with SHA-256): This algorithm uses public/private key pairs for signing and verification, providing stronger security.
+
+===================
+
+html5 and it's feature
+
+New elements/tags -> header, footer, section, nav etc
+Multimedia -> video and audio tags
+form elements -> time, date, email, url etc
+geolocation support -> able to access the user IP location also.
+
+
+which video type support html5
+HTML5 supports various video formats like mp4, webm, ogg etc
+
+
+css3 and it's features
+
+===================
+
+how many ways to integrate css into react?
+componentShouldUpdate
+localStorage/ sessionStorage /cookies
+webpack
+how to start rendering in reactjs?
+how reactjs code will executed?
+diff b/w normal reducer and useReducer?
+
+===================
+
+class vs className
+
+class is a reserved keyword in JavaScript used for defining classes or constructors in object-oriented programming.
+
+className is the attribute used in JSX to specify CSS classes for elements.
+
+===================
+
+localizations
+
+
+===================
+
+sort array without using sort method?
+
+function sortArray(arr) {
+    // Iterate through the array
+    for (let i = 0; i < arr.length; i++) {
+        // Iterate through the array again starting from the next element
+        for (let j = i + 1; j < arr.length; j++) {
+            // Compare adjacent elements
+            if (arr[i] > arr[j]) {
+                // Swap elements if they are in the wrong order
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    // Return the sorted array
+    return arr;
+}
+
+// Example usage:
+const unsortedArray = [3, 1, 4, 1, 5, 9, 2, 6];
+console.log('Unsorted array:', unsortedArray);
+const sortedArray = sortArray(unsortedArray);
+console.log('Sorted array:', sortedArray);
+
+

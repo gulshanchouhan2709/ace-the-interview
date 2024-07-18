@@ -1,0 +1,122 @@
+Restfull/restless apis
+
+RESTful APIs having the predictable URLs and standard methods (like GET, POST, PUT, DELETE) to manage data.
+
+RESTless APIs might use custom methods and URLs that are not as predictable or standardized.
+
+
+=================================================================
+
+JWT
+
+JWT is a secure way to transmit information between the different different server, commonly used for authentication and authorization, and consists of a header, payload, and signature.
+
+
+=================================================================
+
+
+Diff b/w redux and context
+
+Redux for large, complex applications requiring robust state management and extensive debugging capabilities. Opt for Context API for simpler state sharing needs in smaller or less complex applications.
+
+
+=================================================================
+
+Client vs Server side routing
+
+client-side routing is ideal for SPAs where fast navigation and dynamic updates are crucial, while server-side routing is suitable for traditional MPAs where SEO and initial load performance are more important.
+
+=================================================================
+
+End to end testing
+
+End-to-end (E2E) testing in a MERN (MongoDB, Express, React, Node.js) stack involves testing the entire application from the frontend to the backend and ensuring that all components work together as expected.
+
+Steps to Perform End-to-End Testing in MERN Stack
+	Set Up the MERN Application
+	Choose an E2E Testing Framework
+	Write Test Scenarios
+	Run the Tests
+	Analyze Results
+
+
+Cypress: A powerful E2E testing tool that is easy to set up and use.
+
+=================================================================
+
+Use of "App.use()"
+
+We can use app.use() to apply a middleware function such as logging, serving static files, parsing request bodies to all routes.
+
+
+=================================================================
+
+NodeJS app security
+
+1. Use Helmet for Setting HTTP Headers
+2. Enable HTTPS
+3. Use Environment Variables for Configuration
+4. Sanitize/Validate User Input
+5. Prevent Cross-Site Request Forgery (CSRF)
+6. Limit Request Rate
+7. Use Strong Authentication/Authorizations
+8. Logging and Monitoring via winston/morgon.
+
+=================================================================
+
+Fork and Spawn
+
+Fork - Suppose, We have a Node.js server that needs to perform CPU-intensive calculations without blocking the main event loop. You want to offload these calculations to a separate process and communicate with it.
+
+		
+Spawn - When we need to execute external commands, scripts, or binaries (e.g., running shell commands, invoking external programs, or integrating with scripts in other languages).
+
+
+================================================================
+
+Create HTTPS server
+
+To create an HTTPS server, we need an SSL certificate and a private key. For development purposes, you can generate self-signed certificates using the openssl command.
+
+
+const https = require('https');
+const fs = require('fs');
+const path = require('path');
+
+// Load SSL certificate and key
+const options = {
+  key: fs.readFileSync(path.join(__dirname, 'key.pem')),
+  cert: fs.readFileSync(path.join(__dirname, 'cert.pem'))
+};
+
+// Create the HTTPS server
+const server = https.createServer(options);
+
+// Define the port
+const PORT = 3000;
+
+// Start the server
+server.listen(PORT, () => {
+  console.log(`HTTPS server is running on https://localhost:${PORT}`);
+});
+
+
+================================================================
+
+
+Deploy Nodejs into server
+
+Deploying a Node.js application to a server involves several steps, including setting up the server, transferring your application files, installing dependencies, configuring the environment, and ensuring that your application runs as a service.
+
+
+================================================================
+
+
+A WeakMap is a collection of key-value pairs where the keys must be objects, and the values can be of any type. like if there are no other references to the key object, it can be garbage-collected.
+
+A WeakSet is a collection of objects like if there are no other references to the object, it can be garbage-collected.
+
+
+Both WeakMap and WeakSet help with memory management by enabling garbage collection of objects that are no longer needed.
+
+

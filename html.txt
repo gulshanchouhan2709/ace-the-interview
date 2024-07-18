@@ -1,0 +1,58 @@
+html5
+
+New elements/tags -> header, footer, section, nav etc
+
+Multimedia -> video and audio tags
+
+form elements -> time, date, email, url etc
+
+geolocation support -> able to access the user IP location also.
+
+===============================================
+
+CSS3
+
+- Introduce new selectors like :hover, :focus, :before, :after etc
+
+- Able to write media query to become our website responsive in different devices.
+
+- Gradient
+
+- flex and grid box things etc
+
+=========================================
+
+JEST imp 
+
+
+Assertion matchers is allow us to compare actual values with expected values in our test cases.
+
+Enzyme library is used for deep component inspection.
+
+Jest Mock Testing: Mock testing allow us to replaces real modules or functions with controlled mocks to test specific parts of your code.
+
+Simulate: It's basically used for the events (like clicks, key presses) for testing component behavior in React.
+
+Dive: Dive method is used to access and test nested components.
+
+Snapshot Testing: It's compares rendered output of components to stored snapshots to ensure UI consistency across changes.
+
+=====================================
+
+prototypes inheritance is used to share properties and methods between objects.
+
+====================================
+
+Agile Methology
+
+Our Agile team consisted of "Product owner", "Scrum Master" & "Development Team"
+
+Sprint Planning: At the beginning of each sprint, we held a planning meeting where the Product Owner presented the prioritized backlog items. The team discussed and selected items for the sprint, breaking them down into manageable tasks.
+
+Daily Standups: Every morning, we had a 15-minute standup meeting where each team member answered three questions: What did I do yesterday? What will I do today? Are there any impediments?
+
+Task Board: We used Jira to track our tasks, with columns for To Do, In Progress, and Done. This gave us a clear visual representation of our progress.
+
+Sprint Review: At the end of each sprint, we held a review meeting where we demonstrated the working product increment to the stakeholders and gathered feedback.
+
+Sprint Retrospective: Finally, we had a retrospective meeting where we discussed what went well, what didn’t, and how we could improve our processes for the next sprint."
